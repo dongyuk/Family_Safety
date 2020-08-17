@@ -17,3 +17,22 @@ db.one('SELECT $1 AS value', 123)
     console.log('ERROR:', error)
   })
 ```
+If you want an object model driver for PostgreSQL, look at [PostgreSQL](https://github.com/vitaly-t/pg-promise)
+
+- SQL Shell (psql) 실행
+```cmd
+-- user 생성
+CREATE USER scott PASSWORD 'tiger' SUPERUSER;
+-- user 확인
+SELECT * FROM PG_USER;
+```
+
+
+##
+### MongoDB
+- 모듈 다운(cmd에서 실행)
+```
+npm install mongodb
+```
+
+If you want an object model driver for MongoDB, look at [Mongoose](https://github.com/Automattic/mongoose)
