@@ -6,8 +6,8 @@ var UserModel = require('../model/UserModel');
 router.get('/', function(req, res, next) {
   var User = new UserModel();
   User.readAll().then(function(data){
-    res.send(JSON.stringify(data));
-    // res.send(data.USER_ID);
+    // res.send(JSON.stringify(data));
+    res.send(data);
   })
   
   // res.render('index', { title: 'Express' });
