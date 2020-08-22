@@ -1,64 +1,64 @@
 const UserModel = require('../model/UserModel');
 
-class UserHandler{
+class UserHandler {
     constructor() {
         this.model = new UserModel();
     }
 
-    create(req, res){
+    create(req, res) {
         let user = req.body;
 
         this.model.create(user)
-            .then(function(data){
+            .then(function (data) {
                 res.send(JSON.stringify(data));
-            }).catch(function(error){
-                res.send(JSON.stringify({msg : error}));
+            }).catch(function (error) {
+                res.send(JSON.stringify({ msg: error }));
             });
     }
 
-    read(req, res){
+    read(req, res) {
         let id = req.params.user_id;
 
         this.model.read(id)
-            .then(function(data){
+            .then(function (data) {
                 res.send(JSON.stringify(data));
-            }).catch(function(error){
-                res.send(JSON.stringify({msg : error}));
+            }).catch(function (error) {
+                res.send(JSON.stringify({ msg: error }));
             });
     }
 
-    readAll(req, res){
+    readAll(req, res) {
         let id = req.params.user_id;
 
         this.model.readAll()
-            .then(function(data){
+            .then(function (data) {
                 res.send(JSON.stringify(data));
-            }).catch(function(error){
-                res.send(JSON.stringify({msg : error}));
-            });      
+            }).catch(function (error) {
+                res.send(JSON.stringify({ msg: error }));
+            });
     }
 
-    update(req, res){
+    update(req, res) {
         let id = req.params.user_id;
 
         this.model.update(id, user)
-            .then(function(data){
+            .then(function (data) {
                 res.send(JSON.stringify(data));
-            }).catch(function(error){
-                res.send(JSON.stringify({msg : error}));
+            }).catch(function (error) {
+                res.send(JSON.stringify({ msg: error }));
             });
     }
-  
-    delete(req, res){
+
+    delete(req, res) {
         let id = req.params.user_id;
 
         this.model.update(id)
-            .then(function(data){
+            .then(function (data) {
                 res.send(JSON.stringify(data));
-            }).catch(function(error){
-                res.send(JSON.stringify({msg : error}));
+            }).catch(function (error) {
+                res.send(JSON.stringify({ msg: error }));
             });
     }
 }
 
-module.exports = MemoHandler;
+module.exports = UserHandler;
