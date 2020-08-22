@@ -16,7 +16,7 @@ class InfoModel{
         return this.db.collection('familysafety').insertOne(infos).exec();
     }
 
-    readAll(){
+    async readAll(){
         return this.db.collection('familysafety').find({});
     }
 

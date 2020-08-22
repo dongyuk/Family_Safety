@@ -5,8 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser')
 const mongoose = require('mongoose');
-// Node의 native Promise 사용
-mongoose.Promise = global.Promise;
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');

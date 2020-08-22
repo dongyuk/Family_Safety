@@ -9,7 +9,7 @@ const infoHandler = new InfoHandler();
 
 /* GET Infos listing. */
 router.get('/', function (req, res, next) {
-    infoHandler.readAll();
+    infoHandler.readAll(req, res);
 });
 
 module.exports = router;

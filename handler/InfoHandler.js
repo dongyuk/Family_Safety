@@ -27,18 +27,15 @@ class InfoHandler {
             });
     }
 
-    readAll() {  
+    readAll(req, res) {  
         this.model.readAll()
             .then(function (data) {
-                
                 data.forEach(function(detail){
                     // 읽어온 객체 차례대로 넣기.
                     console.log(detail.name);
                  });
-                
-
-                // res.send('read ok');
-            });    
+                res.send('read ok');
+            });  
     }
 
     update(req, res) {
